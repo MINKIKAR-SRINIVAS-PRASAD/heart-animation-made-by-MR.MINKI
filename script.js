@@ -467,3 +467,27 @@ function animate() {
 
   composer.render();
 }
+import { gsap } from "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js";
+
+// Create a GSAP timeline for animation control
+const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+// Animate heart pulsing & rotation
+tl.to(particles.scale, {
+  x: 1.1,
+  y: 1.1,
+  z: 1.1,
+  duration: 1.5,
+  ease: "sine.inOut"
+})
+.to(particles.rotation, {
+  y: "+=0.5",
+  duration: 2,
+  ease: "sine.inOut"
+}, 0)
+.to(scene.userData.bloomPass, {
+  strength: 2.2,
+  duration: 1.5,
+  ease: "sine.inOut"
+}, 0);
+
