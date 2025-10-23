@@ -477,17 +477,17 @@ tl.to(particles.scale, {
   x: 1.1,
   y: 1.1,
   z: 1.1,
-  duration: 1.5,
+  duration: 4.5,
   ease: "sine.inOut"
 })
 .to(particles.rotation, {
   y: "+=0.5",
-  duration: 2,
+  duration: 5,
   ease: "sine.inOut"
 }, 0)
 .to(scene.userData.bloomPass, {
-  strength: 2.2,
-  duration: 1.5,
+  strength: 6.2,
+  duration: 4.5,
   ease: "sine.inOut"
 }, 0);
 
